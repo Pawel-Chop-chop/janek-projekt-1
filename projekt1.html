@@ -163,7 +163,14 @@
     }
     .block-content .content-article .gallery figure{
       margin: 0;
+      max-width: 300px;
+      max-height: 300px;
     }
+    .block-content .content-article .gallery figure img{
+      object-fit: cover;
+      width: 100%;
+    }
+
 /* Widok dla mobilnych */
     @media (max-width:979px) {
       .block-content .content-article .gallery{
