@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <title>Odnawialne źródła energii</title>
+  <link rel="icon" type="image/png" href="./img/favicon.jpg" />
+  <meta charset="UTF-8">
+  <meta name='autor' content="Janek Dusiński" />
+  <!-- Wczytywanie fontów -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Ważne bardzo ! Dla czystości kodu piszemu atrybuty w kolejności alfabetycznej */
+    /* Dodawanie globalnych styli aby łatwiej było używać  */
+    :root {
+      /* Kolory podstawowe wybrane za pomocą storny https://coolors.co/palettes/ */
+      --color-accent: #B5C99A;
+      --color-background: #718355;
+      --color-background-alternative: #CFE1B9;
+      --color-text: #000;
+
+      /* Wielkości czcionek */
+      --fontsize-small: 16px;
+      --fontsize-regular: 20px;
+      --fontsize-medium: 24px;
+      --fontsize-big: 36px;
+
+      /* Grubość czcionek */
+      --fontweight-light: 300;
+      --fontweight-regular: 400;
+      --fontweight-bold: 700;
+
+    }
+
+    body {
+      /* Użycie zmiennych w sytlach*/
+      background-color: var(--color-background);
+      color: var(--color-text);
+      font-family: 'Montserrat', sans-serif;
+      font-size: var(--fontsize-regular);
+      font-weight: var(--fontweight-regular);
+      line-height: 1;
+    }
+
+  </style>
+</head>
+<!-- Semantyka zgodna ze standardem HTML5 -->
+<body class='page'>
+  <header class='page-header'>
+
+  </header>
+  <main class='page-content'>
+    <aside>
+      <nav role='menubar'>
+        <ul role='menu' class='side-menu'>
+          <li class='menu-item'>
+            <a href="#section-1">
+              Odnawialne źródła energii
+            </a>
+          </li>
+          <li class='menu-item'>
+            <a href="#section-2">
+              Rodzaje o.ź.e.
+            </a>
+          </li>
+          <li class='menu-item'>
+            <a href="#section-3">
+              O.ź.e. w Polsce
+            </a>
+          </li>
+          <li class='menu-item'>
+            <a href="#section-4">
+              Galeria
+            </a>
+          </li>
+          <li class='menu-item'>
+            <a href="#section-5">
+              QUIZ
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+
+    <section id='section-1' class='block-content'>
+      <header class='content-header'>
+        <h1 class='heading'>Czym są odnawialne źródła energii?</h1>
+      </header>
+      <article class='content-article'>
+        <p>Odnawialne źródła energii - Ogół zasobów wykorzystywanych do produkcji energii elektrycznej i cieplnej,
+          których długotrwałe wykorzystywanie nie powoduje znacznego deficytu lub, których odnawianie następuje w
+          krótkim czasie. Źródła te obejmują energię wiatru, energię promieniowania słonecznego, energię geotermalną,
+          energię wodną, energię fal, prądów i pływów morskich, energię otrzymywaną z biomasy, biogazu oraz z biopłynów.
+        </p>
+      </article>
+      <footer class='content-footer'>
+
+      </footer>
+    </section>
+
+    <section id='section-2' class='block-content'>
+      <header class='content-header'>
+        <h1 class='heading'> Rodzaje odnawialnych źródeł energii</h1>
+      </header>
+      <article class='content-article'>
+        <p>Najczęściej wymieniane odnawialne źródła energii to:
+        <ol class='article-list'>
+          <li class='list-item'>
+            <h2 class='list-item-heading'>ENERGIA SŁONECZNA</h2>
+            <p>Energia ze słońca może być wykorzystywana na dwa sposoby – do wytwarzania energii elektrycznej lub
+              ciepła. Pierwszego dokonuje się poprzez używanie kolektorów słonecznych, które pochłaniają energię
+              słoneczną i w postaci ciepła przekazują ją dalej do instalacji, gdzie przekształcana jest na możliwą do
+              efektywnego wykorzystania. Druga z metod, czyli fotowoltaika, polega na instalacji ogniw zbudowanych z
+              materiału półprzewodnikowego (najczęściej krzemu), które pozyskują energię promieniowania słonecznego i
+              przekształcają ją na prąd stały. Czy wiesz, że wystarczyłoby pokrycie panelami fotowoltaicznymi 0,3%
+              powierzchni planety by zaspokoić potrzeby energetyczne ludzi na całym świecie? To mniej więcej teren
+              wielkości Szwecji, a więc bardzo nieduży, prawda?</p>
+          </li>
+          <li class='list-item'>
+            <h2 class='list-item-heading'>ENERGIA WIATROWA</h2>
+            <p>Wykorzystanie energii z wiatru bazuje na działaniu turbin wiatrowych, które przekształcają energię
+              kinetyczną wiatru w energię elektryczną. Jak to działa? Farmy wiatrowe składają się z pojedynczych turbin.
+              Turbina wiatrowa to 3 główne elementy: wieża, ruchoma gondola i wirnik, czyli konstrukcja łopat, które
+              obracając się generują energię. Wszystko zaś dzięki wiatrowi, który staje się coraz bardziej popularnym
+              odnawialnym źródłem energii, będąc jednocześnie jednym z dwóch najczęściej wykorzystywanych.</p>
+          </li>
+          <li class='list-item'>
+            <h2 class='list-item-heading'>ENERGIA WODNA</h2>
+            <p>Woda to kolejna siła i ogromny potencjał energetyczny. Energia wodna opiera się na wykorzystaniu siły
+              przepływającej wody. Poprzez systemy spiętrzeń, zapór, turbin i strumieni generuje się energię kinetyczną
+              z ruchu wody i przekształca się ją w energię elektryczną. Do tej dziedziny zaliczyć należy również energię
+              prądów i pływów, która polega na wykorzystaniu regularnych zmian poziomu wody w morzach i oceanach. Te
+              metody stosuje się w specjalnych elektrowniach pływowych, ale jak dotąd nie są one zbyt popularne, w dużej
+              mierze z uwagi na wysokie koszty produkcji takiej energii.</p>
+          </li>
+          <li class='list-item'>
+            <h2 class='list-item-heading'>ENERGIA BIOMASY</h2>
+            <p>Do wytwarzania energii OZE mogą też służyć wszelkie substancje pochodzenia zwierzęcego i roślinnego,
+              które podlegają procesowi biodegradacji. To tzw. biomasa. Tutaj kluczowy jest proces fotosyntezy i
+              przekształcenie w procesie spalania energii słonecznej na taką do efektywnego wykorzystania. Są różne
+              rodzaje biomasy: stała (np. drewno, rośliny), ciekła (tzw. biopaliwa, np. z rzepaku) i gazowa (tzw.
+              biogaz). Popularniejszym zastosowaniem biomasy jest produkcja ciepła, jednak w ostatnim czasie coraz
+              więcej energii generowane jest również w celach elektrycznych.</p>
+          </li>
+          <li class='list-item'>
+            <h2 class='list-item-heading'>ENERGIA GEOTERMALNA</h2>
+            <p>Ostatnim odnawialnym źródłem jest geotermia, czyli energia z wnętrza ziemi, wykorzystująca ciepło wody i
+              skał znajdujących się pod powierzchnią. Kojarzy się najczęściej, zresztą słusznie, z islandzkimi
+              gejzerami. Energia geotermalna jest jednym z najtrudniej pozyskiwalnych źródeł energii odnawialnej z uwagi
+              na fakt, że złoża znajdują się głęboko pod ziemią (nawet do kilku kilometrów wgłąb). Zasoby pozyskuje się
+              za pomocą odwiertów, z których pobiera się gorącą wodę lub parę wodną, która dalej w elektrowni
+              geotermalnej przekształcana jest na energię do wykorzystania. Geotermia jest wykorzystywana przede
+              wszystkim jako źródło energii cieplnej, jednak możliwe jest również wytwarzanie energii elektrycznej.</p>
+          </li>
+        </ol>
+        </p>
+      </article>
+      <footer class='content-footer'>
+
+      </footer>
+    </section>
+
+    <section id='section-3' class='block-content'>
+      <header class='content-header'>
+        <h1 class='heading'>Odnawialne źródła energii w polsce</h1>
+      </header>
+      <article class='content-article'>
+        <p>W Polsce od kilku lat coraz bardziej popularna staje się energia pozyskiwana z odnawialnych źródeł. Z roku na
+          rok wzrasta jej produkcja. Tym razem również tak było. Kolejny rok z rzędu wzrosła produkcja z odnawialnych
+          źródeł energii. Spektakularny wzrost odnotowała, przede wszystkim, fotowoltaika – zwłaszcza prosumencka.
+          Elektrownie słoneczne dostarczyły do systemu aż o 176% więcej energii rok do roku (2 TWh). O 20% (do 2,2 TWh)
+          wzrosło współspalanie biomasy z węglem, czemu sprzyjała wysoka cena praw do emisji CO2. Na trzecim i czwartym
+          miejscu pod względem dynamiki rozwoju wśród „zielonych” elektrowni znalazły się biogazownie (wzrost o 10% do
+          1,2 TWh) i elektrownie wodne (o 8% do 2,1 TWh).
+          Częściej o 16% (0,8 TWh) wykorzystywane były także elektrownie wodne szczytowo-pompowe, czyli największe w
+          Polsce magazyny energii. Wynikało to głównie ze zwiększonego udziału zmiennych źródeł energii (wiatru i
+          fotowoltaiki), które operator systemu przesyłowego musiał częściej bilansować zmagazynowaną energią.
+        </p>
+      </article>
+      <footer class='content-footer'>
+
+      </footer>
+    </section>
+
+    <section id='section-4' class='block-content'>
+      <header class='content-header'>
+        <h1 class='heading'>Galeria grafik nawiązujących do tematu odnawialnych źródeł energii </h1>
+      </header>
+      <article class='content-article'>
+
+      </article>
+      <footer class='content-footer'>
+
+      </footer>
+    </section>
+
+    <section id='section-5' class='block-content'>
+      <header class='content-header'>
+        <h1 class='heading'>QUIZ</h1>
+      </header>
+      <article class='content-article'>
+        <form>
+          <fieldset name='question-1'>
+            <legend>Które z poniższych należy do grona odnawialnych źródeł energii?</legend>
+            <label>
+              <input name='q-1' type='radio' value='1-a'>
+              Węgiel
+            </label>
+            <label>
+              <input name='q-1' type='radio' value='1-b'>
+              Ropa
+            </label>
+            <label>
+              <input name='q-1' type='radio' value='1-c'>
+              Biomasa
+            </label>
+          </fieldset>
+          <fieldset  name='question-2'>
+            <legend>Ile procent powierzchni planety wystarczyłoby pokryć panelami fotowoltaicznymi żeby zaspokoić potrzeby
+              energetyczne ludzi na całym świecie?</legend>
+            <label>
+              <input name='q-2' type='radio' value='2-a'>
+              5%
+            </label>
+            <label>
+              <input name='q-2' type='radio' value='2-b'>
+              0.3%
+            </label>
+            <label>
+              <input name='q-2' type='radio' value='2-c'>
+              36%
+            </label>
+          </fieldset>
+          <fieldset  name='question-2'>
+            <legend>Popularność odnawialnych źródeł enegii w Polsce rośnie czy maleje?</legend>
+            <label>
+              <input name='q-3' type='radio' value='3-a'>
+              Maleje
+            </label>
+            <label>
+              <input name='q-3' type='radio' value='3-b'>
+              Rośnie
+            </label>
+            <label>
+              <input name='q-3' type='radio' value='3-c'>
+              Nie zmienna
+            </label>
+          </fieldset>
+          <input type='submit' name='Wyślij' value='Sprawdź odpowiedzi'>
+        </form>
+      </article>
+      <footer class='content-footer'>
+
+      </footer>
+    </section>
+
+  </main>
+
+  <footer class='page-footer'>
+
+    <h6>Autor strony: Janek Dusiński</h6>
+  </footer>
+
+</body>
+
+</html>
