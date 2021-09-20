@@ -21,7 +21,7 @@
       --color-background: #718355;
       --color-background-alternative: #B5C99A;
       --color-text: #000;
-      --color-white:#fff;
+      --color-white: #fff;
       /* Wielkości czcionek */
       --fontsize-small: 16px;
       --fontsize-regular: 20px;
@@ -68,7 +68,6 @@
 
     .page-content {
       display: flex;
-      flex-wrap: wrap;
       padding: 0 20px;
     }
 
@@ -111,85 +110,180 @@
     }
 
     .page-content .content {
-      flex: 0 0 75%;
+      flex-grow: 1;
     }
 
-    .block-content{
+    .block-content {
       margin-bottom: 20px;
       padding: 20px 10px;
     }
 
-    .block-content:nth-child(2n){
+    .block-content:nth-child(2n) {
       background-color: var(--color-background-alternative);
       border: 1px solid var(--color-white);
     }
 
-    .block-content .content-header{
+    .block-content .content-header {
       font-size: var(--fontsize-medium);
       font-weight: var(--fontweight-bold);
       margin-bottom: 12px;
     }
 
-    .block-content .content-article p{
+    .block-content .content-article p {
       font-size: var(--fontsize-regular);
       font-weight: var(--fontweight-light);
       line-height: 1.2;
     }
-    .block-content .content-article ol ::marker{
+
+    .block-content .content-article ol ::marker {
       font-size: var(--fontsize-medium);
       font-weight: var(--fontweight-bold);
     }
 
-    .block-content .content-article ol li{
+    .block-content .content-article ol li {
       padding-bottom: 12px;
     }
-    .block-content .content-article ol li:last-child{
+
+    .block-content .content-article ol li:last-child {
       padding-bottom: 0;
     }
 
-    .block-content .content-article ol li h2{
+    .block-content .content-article ol li h2 {
       font-size: var(--fontsize-medium);
       font-weight: var(--fontweight-bold);
       margin-bottom: 10px;
     }
 
-    .block-content .content-article .gallery{
+    .block-content .content-article .gallery {
       /* https://css-tricks.com/snippets/css/complete-guide-grid/ */
       display: grid;
-      grid-template-columns: repeat(3,300px);
+      grid-template-columns: repeat(3, 300px);
       grid-column-gap: 12px;
       grid-row-gap: 12px;
       justify-content: center;
     }
-    .block-content .content-article .gallery figure{
+
+    .block-content .content-article .gallery figure {
       margin: 0;
       max-width: 300px;
       max-height: 300px;
     }
-    .block-content .content-article .gallery figure img{
+
+    .block-content .content-article .gallery figure img {
       object-fit: cover;
       width: 100%;
     }
 
-/* Widok dla mobilnych */
+    .page-footer {
+      background-color: var(--color-background-alternative);
+      border: 1px solid var(--color-white);
+      height: auto;
+      max-height: 50px;
+      width: 960px;
+      margin: 0 auto 20px;
+      padding: 20px;
+    }
+
+    form fieldset {
+      margin: 15px 0;
+      border: 1px solid var(--color-white)
+    }
+
+    form fieldset legend {
+      font-size: var(--fontsize-regular);
+      font-weight: var(--fontweight-regular);
+    }
+
+    form fieldset label {
+      font-size: var(--fontsize-regular);
+      font-weight: var(--fontweight-bold);
+    }
+
+    form input[type='submit'] {
+      display: block;
+      padding: 15px 30px;
+      margin: 0 0 0 auto;
+      transition: .3s ease;
+      background-color: var(--color-background-alternative);
+      border: 0;
+      border: 1px solid var(--color-white);
+      cursor: pointer;
+    }
+
+    form input[type='submit']:hover {
+      background-color: var(--color-accent);
+      border: 1px solid var(--color-accent)
+    }
+
+    .page-footer .footer-links {
+      font-size: var(--fontsize-small);
+      font-weight: var(--fontweight-light);
+      color: var(--color-text);
+    }
+
+    .page-footer .footer-links a {
+      color: var(--color-text);
+      transition: .3s ease;
+      text-decoration: unset;
+      padding-right: 15px;
+    }
+
+    .page-footer .footer-links a:hover {
+      color: var(--color-accent);
+    }
+
+    /* Widok dla mobilnych */
     @media (max-width:979px) {
-      .block-content .content-article .gallery{
-        grid-template-columns: repeat(2,300px);
+      .block-content .content-article .gallery {
+        grid-template-columns: repeat(2, 300px);
       }
+
       .page-content .content,
       .page-content .page-aside {
         flex: 0 0 100%;
+        width: 100%;
+        height: auto;
+      }
+
+      .page-content .page-aside {
+        position: fixed;
+        top: 0;
+      }
+
+      .page-content .page-aside .side-menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 15px;
+        top: 0;
+        width: 100%;
+        background-color: white;
+      }
+
+      .page-content .page-aside .side-menu li {
+        padding-right: 15px;
+      }
+
+      .page-footer {
+        width: auto;
       }
     }
 
 
     @media (max-width:672px) {
-      .page-content .page-aside {
-        position: static;
+      .page-content .page-aside .side-menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: white;
       }
 
-      .block-content .content-article .gallery{
-        grid-template-columns: repeat(1,300px);
+
+      .block-content .content-article .gallery {
+        grid-template-columns: repeat(1, 300px);
       }
 
     }
@@ -387,7 +481,7 @@
           <h1 class='heading'>QUIZ</h1>
         </header>
         <article class='content-article'>
-          <form>
+          <form class='quiz'>
             <fieldset name='question-1'>
               <legend>Które z poniższych należy do grona odnawialnych źródeł energii?</legend>
               <label>
@@ -449,8 +543,35 @@
   <footer class='page-footer'>
 
     <h6>Autor strony: Janek Dusiński</h6>
-  </footer>
+    <div class='footer-links'>
+      <i>Źródła:</i><br><br>
+      <a href='teraz-srodowisko.pl' target="_blank">teraz-srodowisko.pl</a>
+      <a href='innogy.pl' target="_blank">innogy.pl</a>
+      <a href='wysokienapiecie.pl' target="_blank">wysokienapiecie.pl</a>
+    </div>
 
+  </footer>
+  <script>
+    var form = document.querySelector('form.quiz');
+    if (form) {
+      var odp = ['1-c', '2-b', '3-b'];
+
+      form.querySelector('input[type="submit"]').addEventListener('click', e => {
+        let wynik = 0;
+        e.preventDefault();
+        form.querySelectorAll('input[type="radio"]:checked').forEach((el, i) => {
+          if (odp[i] == el.value) wynik++;
+        })
+        if (wynik) {
+          alert("Twoj wynik to: " + wynik + " /3. Gratulacje!");
+        } else {
+          alert("Spróbuj chociaż strzelić ;)");
+        }
+
+      });
+
+    }
+  </script>
 </body>
 
 </html>
